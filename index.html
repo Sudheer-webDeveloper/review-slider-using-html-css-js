@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="hero">
+        <h1>Customer Review</h1>
+
+
+        <div class="review-box">
+            <div id="slide">
+                <div class="card">
+                    <div class="profile">
+                        <img src="images/pic1.jpg" alt="">
+                        <div>
+                            <h3>Sunny James</h3>
+                            <p>Web Designer</p>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam quibusdam aliquam porro
+                        perferendis? Optio quos magnam itaque dolor accusantium? Exercitationem laborum amet non saepe
+                        officia libero dolores. Est, ut dolore Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Repudiandae?.</p>
+                </div>
+
+                <!-- -------------- 2nd profile-------------- -->
+                <div class="card">
+                    <div class="profile">
+                        <img src="images/pic2.jpg" alt="">
+                        <div>
+                            <h3>Sunny James</h3>
+                            <p>Web Designer</p>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam quibusdam aliquam porro
+                        perferendis? Optio quos magnam itaque dolor accusantium? Exercitationem laborum amet non saepe
+                        officia libero dolores. Est, ut dolore Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Repudiandae?.</p>
+                </div>
+
+
+                <!-- -------------- 3rd profile-------------- -->
+
+                <div class="card">
+                    <div class="profile">
+                        <img src="images/pic3.jpg" alt="">
+                        <div>
+                            <h3>Sunny James</h3>
+                            <p>Web Designer</p>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam quibusdam aliquam porro
+                        perferendis? Optio quos magnam itaque dolor accusantium? Exercitationem laborum amet non saepe
+                        officia libero dolores. Est, ut dolore Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Repudiandae?.</p>
+                </div>
+
+
+                <!-- -------------- 4rth profile-------------- -->
+
+
+                <div class="card">
+                    <div class="profile">
+                        <img src="images/pic4.jpg" alt="">
+                        <div>
+                            <h3>Sunny James</h3>
+                            <p>Web Designer</p>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam quibusdam aliquam porro
+                        perferendis? Optio quos magnam itaque dolor accusantium? Exercitationem laborum amet non saepe
+                        officia libero dolores. Est, ut dolore Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Repudiandae?.</p>
+                </div>
+
+            </div>
+            <div class="sidebar">
+                <img src="images/up-arrow.png" alt="" id="upArrow">
+                <img src="images/down-arrow.png " alt="" id="downArrow">
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+    <script>
+        let slide = document.getElementById("slide");
+        let upArrow = document.getElementById("upArrow");
+        let downArrow = document.getElementById("downArrow");
+
+
+        let x = 0;   ///  we know the total height of slide is 300 so that's why we have given x is 300 ,,bother wise we can  give 500 ,----infinity how much we want ,,here requirement is just only for 300 that's why x = 300 // keep x  500 and see  then you will understand.
+
+        upArrow.onclick = function () {
+            if (x > "-900") {   // { x value goes from 0 , -300 , -600 , -900}
+                x = x - 300;                  // initiallly x is 0 now x= x-300 -----x= 0- 300 , so now x = -300
+                slide.style.top = x + "px";  // now we are applying for  top position of slide --  -300 +"px" ----> -300px now  the slide position top is at -300 px 
+            }
+        }
+        downArrow.onclick = function () {
+            if (x < 0) { // { here x value goes from 0 -300 , -600, -900}
+                x = x + 300;                 // here x value is always less than 0 so for every down click the top will be increased by 300px 
+                slide.style.top = x + "px";  
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>
